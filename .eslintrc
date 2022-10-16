@@ -1,0 +1,35 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb-typescript", "prettier", "plugin:import/typescript"],
+  "plugins": ["prettier", "@typescript-eslint", "import"],
+  "rules": {
+    "import/no-unresolved": "error",
+    "prettier/prettier": "error",
+    "arrow-body-style": "error",
+    "import/prefer-default-export": "off",
+    "arrow-parens": ["error", "always"],
+    "func-names": "error",
+    "implicit-arrow-linebreak": "off",
+    "no-underscore-dangle": "warn",
+    "no-use-before-define": "error",
+    "no-console": "error",
+    "react/jsx-filename-extension": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": ["**/dist/*.js"]
+}

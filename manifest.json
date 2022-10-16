@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Docker - Dev Environments",
+  "short_name": "Dev Environments",
+  "description": "Quickly run pre-configured, containerized development environments!",
+  "version": "0.1",
+  "icons": {
+    "48": "icons/icon_devenvs.png",
+    "96": "icons/icon_devenvs.png",
+    "128": "icons/icon_devenvs.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*", "*://*.bitbucket.org/*", "*://*.gitlab.com/*"],
+      "js": ["dist/devEnvs.js"],
+      "css": ["css/style.css"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Dev Environments",
+    "default_icon": "icons/icon_devenvs.svg"
+  },
+  "permissions": ["tabs", "*://*.github.com/*", "*://*.bitbucket.org/*"]
+}

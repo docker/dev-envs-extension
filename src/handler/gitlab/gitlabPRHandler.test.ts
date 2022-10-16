@@ -1,0 +1,58 @@
+import { BUTTON_ID, BUTTON_TEXT } from '../../common/consts';
+import { GitlabPRHandler } from './gitlabPRHandler';
+
+describe('only handles correct URLs', () => {
+  const cases = [
+    {
+      description: 'non-gitlab URL',
+      url: 'https://google.com',
+      expected: false,
+    },
+    {
+      description: 'non-gitlab URL with /merge_requests',
+      url: 'https://google.com/docker/dev-envs-extension/merge_requests/123',
+      expected: false,
+    },
+    {
+      description: 'Gitlab PRs dashboard URL',
+      url: 'https://gitlab.com/docker/dev-envs-extension/merge_requests',
+      expected: false,
+    },
+    {
+      description: 'Gitlab PR URL',
+      url: 'https://gitlab.com/docker/dev-envs-extension/merge_requests/123',
+      expected: true,
+    },
+    {
+      description: 'Gitlab Repo URL',
+      url: 'https://gitlab.com/docker/dev-envs-extension',
+      expected: false,
+    },
+    {
+      description: 'Gitlab Repo URL with branch',
+      url: 'https://gitlab.com/docker/dev-envs-extension/tree/feature-bork',
+      expected: false,
+    },
+  ];
+
+  const handler = new GitlabPRHandler();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  it.each(cases)('correctly handles a $description', ({ description, url, expected }) => {
+    expect(handler.canHandlePage(url)).toBe(expected);
+  });
+});
+
+// todo: fix this
+// describe('load', () => {
+//   it('injects button', () => {
+//     document.body.innerHTML = `
+//       <div class="file-navigation">
+//       </>
+//     `;
+//
+//     const handler = new GitlabPRHandler();
+//     handler.load();
+//
+//     expect(document.getElementById(BUTTON_ID).textContent).toBe(BUTTON_TEXT);
+//   });
+// });
