@@ -33,6 +33,11 @@ describe('only handles correct URLs', () => {
       url: 'https://github.com/docker/dev-envs-extension/tree/feature-bork',
       expected: true,
     },
+    {
+      description: 'Github Repo commit history URL',
+      url: 'https://github.com/docker/dev-envs-extension/commits/main',
+      expected: false,
+    },
   ];
 
   const handler = new GithubRepoHandler();

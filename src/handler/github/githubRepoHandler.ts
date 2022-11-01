@@ -20,7 +20,7 @@ const getContainer = () => document.getElementsByClassName('file-navigation')[0]
 
 export class GithubRepoHandler implements Handler {
   canHandlePage = (url: string) =>
-    /.*github.com\/.+\/.+/.test(url) && !url.includes('/pull/') && !url.includes('/pulls');
+    /.*github.com\/.+\/.+/.test(url) && !url.includes('/pull/') && !url.includes('/pulls') && !url.includes('/commits');
 
   pageIsReady = () => !!getContainer();
 
