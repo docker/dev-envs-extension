@@ -16,9 +16,5 @@
       "css": ["css/style.css"]
     }
   ],
-  "browser_action": {
-    "default_title": "Dev Environments",
-    "default_icon": "icons/icon_devenvs.svg"
-  },
   "permissions": ["tabs", "*://*.github.com/*", "*://*.bitbucket.org/*"]
 }
