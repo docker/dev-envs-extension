@@ -15,6 +15,5 @@
       "js": ["dist/devEnvs.js"],
       "css": ["css/style.css"]
     }
-  ],
-  "permissions": ["tabs", "*://*.github.com/*", "*://*.bitbucket.org/*", "*://*.gitlab.com/*"]
+  ]
 }
