@@ -3,7 +3,7 @@
   "name": "Docker - Dev Environments",
   "short_name": "Dev Environments",
   "description": "Quickly run pre-configured, containerized development environments!",
-  "version": "0.1",
+  "version": "0.1.1",
   "icons": {
     "48": "icons/icon_devenvs.png",
     "96": "icons/icon_devenvs.png",
@@ -16,5 +16,5 @@
       "css": ["css/style.css"]
     }
   ],
-  "permissions": ["tabs", "*://*.github.com/*", "*://*.bitbucket.org/*"]
+  "permissions": ["tabs", "*://*.github.com/*", "*://*.bitbucket.org/*", "*://*.gitlab.com/*"]
 }
