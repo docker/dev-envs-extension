@@ -3,6 +3,9 @@ import { renderIcon } from '../../common/icon';
 import { openDevEnv } from '../../utils/utils';
 import { Handler } from '../handler';
 
+const getPRURL = () =>
+  document.location.href.replace('/files', '').replace('/commits', '').replace('/checks', '').replace('/files', '');
+
 const renderButton = () => {
   const icon = renderIcon();
   const ourButton = document.createElement('button');
@@ -10,7 +13,7 @@ const renderButton = () => {
   ourButton.title = BUTTON_TITLE;
   ourButton.textContent = BUTTON_TEXT;
   ourButton.className = `${DEVENVS_BUTTON_STYLE} ${GITHUB_BUTTON_STYLE} btn btn-sm`;
-  ourButton.addEventListener('click', openDevEnv(document.location.href));
+  ourButton.addEventListener('click', openDevEnv(getPRURL()));
   ourButton.appendChild(icon);
 
   return ourButton;
