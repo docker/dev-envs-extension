@@ -1,4 +1,3 @@
-import { BUTTON_ID, BUTTON_TEXT } from '../../common/consts';
 import { GitlabRepoHandler } from './gitlabRepoHandler';
 
 describe('only handles correct URLs', () => {

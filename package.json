@@ -7,9 +7,10 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "lint": "eslint .",
-    "test": "jest"
+    "build": "yarn lint && webpack",
+    "test": "yarn lint && jest",
+    "package": "yarn build && zip -rD --exclude='src/*.ts' dev-envs.xpi css dist icons manifest.json && zip -rD dev-envs-source.zip *",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@types/jest": "^29.2.0",
