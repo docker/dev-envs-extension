@@ -40,18 +40,3 @@ describe('only handles correct URLs', () => {
     expect(handler.canHandlePage(url)).toBe(expected);
   });
 });
-
-// todo: fix this
-// describe('load', () => {
-//   it('injects button', () => {
-//     document.body.innerHTML = `
-//       <div class="file-navigation">
-//       </>
-//     `;
-//
-//     const handler = new GitlabRepoHandler();
-//     handler.load();
-//
-//     expect(document.getElementById(BUTTON_ID).textContent).toBe(BUTTON_TEXT);
-//   });
-// });
