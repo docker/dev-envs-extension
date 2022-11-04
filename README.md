@@ -14,9 +14,8 @@ Allows you to quickly jump from a Github repo, branch or PR to a local developme
 
 <img src="https://github.com/docker/dev-envs-extension/raw/main/docs/button_github_example.png" />
 
-<!-- todo: add marketplace links here-->
+Supports [Firefox](https://addons.mozilla.org/en-US/firefox/addon/docker-dev-environments/), Chrome and Edge.
 
-Supports Firefox, Chrome and Edge.
 
 ## Contributing
 
@@ -27,6 +26,14 @@ Unit tests can be ran with `yarn test`. Please remember to add/update tests when
 ### Local Development
 
 The extension can be built with `yarn build`. You can find instructions on installing an extension temporarily for Firefox [here](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). For Chrome, check out this [guide](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
+
+
+## Publishing
+
+The extension can be packaged with `yarn package`. Running this will output `dev-envs.xpi` and `dev-envs-source.zip`, which are the extension and source bundle respectively which can be uploaded to the [Chrome Web Store](https://chrome.google.com/webstore/category/extensions) and [Firefox Addons](https://addons.mozilla.org/en-US/firefox/).
+
+Don't forget to update the version in `manifest.json` before building a new version.
+
 
 ---
 
