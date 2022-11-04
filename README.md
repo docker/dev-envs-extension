@@ -10,7 +10,7 @@
 
 ---
 
-Allows you to quickly jump from a Github repo, branch or PR to a local development environment with the tools you need to test and run your workload — using [Dev Environments](https://docs.docker.com/desktop/dev-environments/) — by adding a button to Github, Bitbucket and Gitlab, in your browser.
+Allows you to quickly jump from a Git repo, branch or PR to a local development environment with the tools you need to test and run your workload — using [Dev Environments](https://docs.docker.com/desktop/dev-environments/) — by adding a button to Github, Bitbucket and Gitlab, in your browser.
 
 <img src="https://github.com/docker/dev-envs-extension/raw/main/docs/button_github_example.png" />
 
