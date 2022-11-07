@@ -23,11 +23,11 @@ Allows you to quickly jump from a Git repo, branch or PR to a local development 
 
 ### Supported Pages
 
-| Provider  | Repo               | Branch             | PR                 |
-| --------- | ------------------ | ------------------ | ------------------ |
+| Provider  |        Repo        |       Branch       |         PR         |
+| :-------- | :----------------: | :----------------: | :----------------: |
 | Github    | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Bitbucket | :white_check_mark: | :white_check_mark: | :x:                |
-| Gitlab    | :white_check_mark: | :white_check_mark: | :x:                |
+| Bitbucket | :white_check_mark: | :white_check_mark: |        :x:         |
+| Gitlab    | :white_check_mark: | :white_check_mark: |        :x:         |
 
 ## Contributing
 
