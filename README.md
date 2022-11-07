@@ -21,8 +21,6 @@ Allows you to quickly jump from a Git repo, branch or PR to a local development 
 
 <img src="./docs/button_github_example.png" />
 
-<br>
-
 ### Supported Pages
 
 | Provider  | Repo               | Branch             | PR                 |
