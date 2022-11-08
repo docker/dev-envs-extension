@@ -14,7 +14,7 @@
 
 ### Looking to install the extension?
 
-- **Chrome/Edge**
+- [**Chrome/Edge**](https://chrome.google.com/webstore/detail/docker-dev-environments/gnagpachnalcofcblcgdbofnfakdbeka)
 - [**Firefox**](https://addons.mozilla.org/en-US/firefox/addon/docker-dev-environments/)
 
 ---
