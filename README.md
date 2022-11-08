@@ -1,5 +1,7 @@
 <h1 align="center">Dev Environments Extension</h1>
 
+[![CI](https://github.com/docker/dev-envs-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/docker/dev-envs-extension/actions/workflows/ci.yml)
+
 <div align="center">
   <img width="100" height="100" src="https://github.com/docker/awesome-compose/raw/master/icon_devenvs.svg" />
 </div>
