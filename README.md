@@ -1,4 +1,4 @@
-<h1 align="center">Dev Environments Extension</h1>
+<h1 align="center">Dev Environments Extension <sup><img width="40" height="28" src="./docs/beta_badge.png" /></sup></h1>
 
 [![CI](https://github.com/docker/dev-envs-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/docker/dev-envs-extension/actions/workflows/ci.yml)
 
