@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch"
+        required: true
+        default: "main"
+      tag:
+        description: "Release Tag"
+
+jobs:
+  ship:
+    name: Ship
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - name: Package
+        run: yarn package
+      - name: Ship it
+        if: ${{ github.event.inputs.tag != '' }} # don't release if no tag is specified
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./dev-envs.xpi,./dev-envs-source.zip"
+          prerelease: true
+          draft: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.event.inputs.tag }}
+          commit: ${{ github.event.inputs.branch }}
+
