@@ -27,7 +27,10 @@ const renderButton = () => {
 };
 
 export class GitlabRepoHandler implements Handler {
-  canHandlePage = (url: string) => /.*gitlab.com\/.+\/.+/.test(url) && !url.includes('/merge_requests');
+  canHandlePage = (url: string) =>
+    // support both cloud and self-hosted instances
+    // self-hosted instances may be not only in .com domain
+    /((.*\.gitlab\.com)|(gitlab\..*))\/.+\/.+/.test(url) && !url.includes('/merge_requests');
 
   pageIsReady = () => !!getContainer();
 

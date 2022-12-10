@@ -11,7 +11,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.github.com/*", "*://*.bitbucket.org/*", "*://*.gitlab.com/*"],
+      "matches": ["*://*.github.com/*", "*://*.bitbucket.org/*", "*://*.gitlab.com/*", "*://gitlab.*/*"],
       "js": ["dist/devEnvs.js"],
       "css": ["css/style.css"]
     }
